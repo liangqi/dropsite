@@ -8,7 +8,7 @@ if(NOT DEFINED INSTALL_EXAMPLESDIR)
     set(INSTALL_EXAMPLESDIR "examples")
 endif()
 
-set(INSTALL_EXAMPLEDIR "${INSTALL_EXAMPLESDIR}/widgets/draganddrop/dropsite")
+set(INSTALL_EXAMPLEDIR "/app/bin/")
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
@@ -28,6 +28,7 @@ set_target_properties(dropsite PROPERTIES
 target_link_libraries(dropsite PRIVATE
     Qt6::Core
     Qt6::Gui
+    Qt6::GuiPrivate
     Qt6::Widgets
 )
 
